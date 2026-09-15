@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Creative Doodles</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23FF9F45%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- floating background shapes -->
+  <div class="bg-doodles" id="bgDoodles" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav-brand">
+      <span class="nav-dot"></span> Creative Doodles
+    </div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#weather">Doodle Weather</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="eyebrow">A little corner of the internet that</p>
+      <h1>doodles, blinks<br> &amp; keeps an eye on you.</h1>
+      <p class="sub">Move your mouse around, every character on this page is watching. Scroll down and it also tells you the weather, because a doodle should be a little useful too.</p>
+      <a href="#weather" class="cta">Check the weather</a>
+    </div>
+
+    <div class="hero-stage" id="heroStage">
+      <!-- blobs get injected by JS, each with googly eyes -->
+    </div>
+  </section>
+
+  <!-- WEATHER TOOL -->
+  <section class="weather" id="weather">
+    <div class="weather-intro">
+      <h2>Doodle Weather</h2>
+      <p>A tiny, real weather check, no sign‑up, no tracking. Pulled live from Open‑Meteo's open weather data.</p>
+    </div>
+
+    <div class="weather-card">
+      <div class="weather-face" id="weatherFace">
+        <div class="w-blob" id="wBlob">
+          <div class="w-eye"><div class="w-pupil"></div></div>
+          <div class="w-eye"><div class="w-pupil"></div></div>
+          <div class="w-mouth" id="wMouth"></div>
+        </div>
+      </div>
+
+      <div class="weather-body">
+        <form id="citySearchForm" class="search-row" autocomplete="off">
+          <input type="text" id="cityInput" placeholder="Try 'Lahore' or 'Karachi'..." aria-label="Search a city" />
+          <button type="submit" aria-label="Search">Search</button>
+        </form>
+
+        <button id="locBtn" class="loc-btn">📍 Use my location instead</button>
+
+        <div id="weatherResult" class="weather-result">
+          <p class="hint">Search a city above, or share your location to see live conditions here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="split-words">What's actually happening here</h2>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <h3>Googly eyes</h3>
+        <p>Every blob's pupils track your cursor in real time using plain JavaScript, no library, no AI, just angles and clamping.</p>
+      </div>
+      <div class="about-card reveal">
+        <h3>Live weather</h3>
+        <p>Temperature and conditions come from Open‑Meteo's free public API, a real pre-built weather service, fetched straight from your browser.</p>
+      </div>
+      <div class="about-card reveal">
+        <h3>Hand-drawn feel</h3>
+        <p>Soft blobs, wobble animations and hand-picked colors give the page its sketchy, playful personality.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Made by LAKhan from creativity and a bit of chaos — Creative Doodles</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
